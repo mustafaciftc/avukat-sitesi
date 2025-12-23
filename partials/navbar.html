@@ -1,0 +1,58 @@
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 nav-blur transition-all duration-300 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+            <a href="/" class="flex items-center space-x-3 group">
+                <div
+                    class="w-12 h-12 rounded-lg flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300">
+                    <img src="/images/logo.png" class="w-10 h-10" alt="">
+                    <!-- <i class="fas fa-balance-scale text-slate-900 text-xl"></i> -->
+                </div>
+                <div class="hidden md:block">
+                    <div class="text-gold font-bold text-lg">Av. Ali YAĞCI</div>
+                    <div class="text-slate-400 text-xs">Hukuk Bürosu</div>
+                </div>
+            </a>
+
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="/pages/hakkinda.html"
+                    class="text-slate-300 hover:text-gold transition-colors duration-300 relative group">
+                    Hakkımızda
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all group-hover:w-full"></span>
+                </a>
+                <a href="/pages/hizmetler.html"
+                    class="text-slate-300 hover:text-gold transition-colors duration-300 relative group">
+                    Hizmetler
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all group-hover:w-full"></span>
+                </a>
+                <a href="/pages/deneyim.html"
+                    class="text-slate-300 hover:text-gold transition-colors duration-300 relative group">
+                    Deneyim
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all group-hover:w-full"></span>
+                </a>
+                <a href="/pages/iletisim.html"
+                    class="text-slate-300 hover:text-gold transition-colors duration-300 relative group">
+                    İletişim
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all group-hover:w-full"></span>
+                </a>
+            </div>
+
+            <button id="menu-toggle" class="md:hidden text-slate-300 text-2xl hover:text-gold transition-colors">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="md:hidden">
+            <div class="py-4 space-y-4 border-t border-slate-800">
+                <a href="/pages/hakkinda.html"
+                    class="block text-slate-300 hover:text-gold transition-colors py-2 px-4 hover:bg-slate-800/50 rounded-lg">Hakkımızda</a>
+                <a href="/pages/hizmetler.html"
+                    class="block text-slate-300 hover:text-gold transition-colors py-2 px-4 hover:bg-slate-800/50 rounded-lg">Hizmetler</a>
+                <a href="/pages/deneyim.html"
+                    class="block text-slate-300 hover:text-gold transition-colors py-2 px-4 hover:bg-slate-800/50 rounded-lg">Deneyim</a>
+                <a href="/pages/iletisim.html"
+                    class="block text-slate-300 hover:text-gold transition-colors py-2 px-4 hover:bg-slate-800/50 rounded-lg">İletişim</a>
+            </div>
+        </div>
+    </div>
+</nav>
