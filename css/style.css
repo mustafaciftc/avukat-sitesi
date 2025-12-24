@@ -135,3 +135,18 @@
             background: #d4af37;
             border: 3px solid #0f172a;
         }
+
+        /* Component boşluk fix */
+        #hero>*:first-child,
+        #about>*:first-child,
+        #services>*:first-child,
+        #contact>*:first-child {
+            margin-top: 0 !important;
+        }
+
+        #hero>*:last-child,
+        #about>*:last-child,
+        #services>*:last-child,
+        #contact>*:last-child {
+            margin-bottom: 0 !important;
+        }
