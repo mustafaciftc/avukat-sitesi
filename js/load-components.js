@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     loadComponent('navbar', '/partials/navbar.html');
     loadComponent('hero', '/partials/hero.html');
+    loadComponent('hero2', '/partials/hero2.html');
     loadComponent('about', '/partials/about.html');
     loadComponent('services', '/partials/services.html');
     loadComponent('contact', '/partials/contact.html');
