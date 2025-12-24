@@ -1,75 +1,113 @@
-<!-- Hero Section -->
-<section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
-    <div class="absolute inset-0 opacity-5">
-        <div class="absolute top-20 left-20 w-96 h-96 bg-gold rounded-full blur-3xl"></div>
-        <div class="absolute bottom-20 right-20 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
-    </div>
-    
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div class="animate-fade-in-up">
-                <div class="text-gold text-sm font-semibold tracking-wider uppercase mb-4">Manisa'da Hukuki Danışmanlık</div>
-                <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-                    Adaletin <span class="text-gold">Güvenilir</span> Sesi
-                </h1>
-                <p class="text-slate-300 text-lg md:text-xl mb-8 leading-relaxed">
-                    10+ yıllık hukuki tecrübemizle, Manisa ve çevre illerde hukuki haklarınızı korumak için yanınızdayız. 
-                    Profesyonel yaklaşım, etik değerler ve müvekkil memnuniyeti önceliğimizdir.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="/pages/iletisim.html" class="bg-gold text-slate-900 px-8 py-4 rounded-lg font-semibold hover:bg-yellow-500 transition-all duration-300 text-center transform hover:scale-105 shadow-lg flex items-center justify-center">
-                        <i class="fas fa-calendar-check mr-2"></i>Randevu Alın
-                    </a>
-                    <a href="tel:+905533419509" class="border-2 border-gold text-gold px-8 py-4 rounded-lg font-semibold hover:bg-gold transition-all duration-300 text-center transform hover:scale-105 flex items-center justify-center">
-                        <i class="fas fa-phone mr-2"></i>Hemen Arayın
-                    </a>
-                </div>
-                
-                <div class="grid grid-cols-3 gap-6 mt-12">
-                    <div class="text-center">
-                        <div class="stat-number text-4xl font-bold text-gold mb-1">10+</div>
-                        <div class="text-slate-400 text-sm">Yıl Deneyim</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="stat-number text-4xl font-bold text-gold mb-1">500+</div>
-                        <div class="text-slate-400 text-sm">Başarılı Dava</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="stat-number text-4xl font-bold text-gold mb-1">%95</div>
-                        <div class="text-slate-400 text-sm">Memnuniyet</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="hidden md:block">
-                <div class="relative">
-                    <div class="glass p-8 rounded-3xl shadow-2xl">
-                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800" alt="Hukuk Bürosu" class="rounded-2xl w-full h-auto shadow-xl">
-                    </div>
-                    <div class="absolute -bottom-6 -left-6 glass p-6 rounded-2xl shadow-xl">
-                        <div class="flex items-center space-x-3">
-                            <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center">
-                                <i class="fas fa-user-tie text-slate-900 text-xl"></i>
-                            </div>
-                            <div>
-                                <div class="text-gold font-bold text-lg">Manisa Barosu</div>
-                                <div class="text-slate-400 text-sm">Sicil No: 1678</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="absolute -top-6 -right-6 glass p-6 rounded-2xl shadow-xl">
-                        <div class="flex items-center space-x-3">
-                            <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
-                                <i class="fas fa-handshake text-white text-xl"></i>
-                            </div>
-                            <div>
-                                <div class="text-white font-bold text-lg">İlk Görüşme</div>
-                                <div class="text-slate-400 text-sm">Ücretsiz</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- Hero Section - Premium -->
+<section id="home" class="relative min-h-screen flex items-center overflow-hidden">
+
+    <!-- Background -->
+    <div class="absolute inset-0">
+        <img 
+            src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1920&q=80"
+            alt="Adalet"
+            class="w-full h-full object-cover object-center scale-105"
+        >
+
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-r 
+            from-slate-950/95 
+            via-slate-900/85 
+            to-slate-900/40">
         </div>
     </div>
+
+    <!-- Content -->
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32">
+        <div class="max-w-2xl">
+
+            <!-- Subtitle -->
+            <span class="inline-block mb-6 text-[13px] tracking-[0.25em] uppercase font-semibold 
+                         text-[#d4af37]">
+                Manisa'da Hukuki Danışmanlık
+            </span>
+
+            <!-- Title -->
+            <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-8">
+                Adaletin <br>
+                <span class="text-[#d4af37] drop-shadow-lg">
+                    Güvenilir
+                </span> Sesi
+            </h1>
+
+            <!-- Description -->
+            <p class="text-slate-300 text-lg md:text-xl leading-relaxed max-w-xl mb-12">
+                10+ yıllık hukuki tecrübemizle Manisa ve çevre illerde,
+                haklarınızı kararlılıkla savunuyoruz.
+            </p>
+
+            <!-- Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 mb-20">
+
+                <a href="/pages/iletisim.html"
+                   class="inline-flex items-center justify-center gap-2
+                          bg-[#d4af37] text-slate-900
+                          px-8 py-4 rounded-xl font-semibold
+                          shadow-[0_20px_40px_rgba(212,175,55,0.25)]
+                          hover:bg-[#e6c35c] hover:shadow-[0_25px_50px_rgba(212,175,55,0.35)]
+                          transition-all duration-300">
+                    <i class="fas fa-calendar-check"></i>
+                    Randevu Alın
+                </a>
+
+                <a href="/pages/hakkinda.html"
+                   class="inline-flex items-center justify-center gap-2
+                          border border-white/40 text-white
+                          px-8 py-4 rounded-xl font-semibold
+                          backdrop-blur-sm
+                          hover:bg-white hover:text-slate-900
+                          transition-all duration-300">
+                    <i class="fas fa-info-circle"></i>
+                    Hakkımızda
+                </a>
+
+            </div>
+
+            <!-- Stats -->
+            <div class="grid grid-cols-3 gap-8 max-w-xl">
+
+                <div>
+                    <div class="text-3xl md:text-5xl font-bold text-[#d4af37] mb-1">
+                        10+
+                    </div>
+                    <div class="text-slate-400 text-sm md:text-base">
+                        Yıl Deneyim
+                    </div>
+                </div>
+
+                <div>
+                    <div class="text-3xl md:text-5xl font-bold text-[#d4af37] mb-1">
+                        500+
+                    </div>
+                    <div class="text-slate-400 text-sm md:text-base">
+                        Başarılı Dava
+                    </div>
+                </div>
+
+                <div>
+                    <div class="text-3xl md:text-5xl font-bold text-[#d4af37] mb-1">
+                        %95
+                    </div>
+                    <div class="text-slate-400 text-sm md:text-base">
+                        Memnuniyet
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+        <a href="#about" class="text-[#d4af37] hover:text-[#e6c35c] transition-colors">
+            <i class="fas fa-chevron-down text-3xl"></i>
+        </a>
+    </div>
+
 </section>

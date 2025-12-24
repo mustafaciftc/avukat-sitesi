@@ -1,0 +1,98 @@
+/* Navbar Scroll Effects - Renk Tersine Çevirme */
+
+/* Temel navbar stilleri */
+nav {
+    transition: all 0.4s ease-in-out !important;
+}
+
+/* Normal Durum - Şeffaf arkaplan, açık yazılar (Varsayılan) */
+nav,
+nav.nav-transparent {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+}
+
+/* Logo ve yazı renkleri - Normal durum */
+nav.nav-transparent .text-gold,
+nav .text-gold {
+    color: #D4AF37 !important;
+    transition: color 0.4s ease-in-out !important;
+}
+
+nav.nav-transparent .text-slate-400,
+nav .text-slate-400 {
+    color: #94a3b8 !important;
+    transition: color 0.4s ease-in-out !important;
+}
+
+nav.nav-transparent i.fa-balance-scale,
+nav i.fa-balance-scale {
+    color: #D4AF37 !important;
+    transition: color 0.4s ease-in-out !important;
+}
+
+nav.nav-transparent a,
+nav.nav-transparent button#menu-toggle,
+nav a,
+nav button#menu-toggle {
+    color: #e2e8f0 !important;
+    transition: color 0.4s ease-in-out !important;
+}
+
+nav.nav-transparent a:hover,
+nav.nav-transparent button#menu-toggle:hover,
+nav a:hover,
+nav button#menu-toggle:hover {
+    color: #D4AF37 !important;
+}
+
+/* Scroll Durumu - Beyaz arkaplan, koyu yazılar */
+nav.nav-scrolled {
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(10px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Logo ve yazı renkleri - Scroll durumu */
+nav.nav-scrolled .text-gold {
+    color: #1e40af !important;
+}
+
+nav.nav-scrolled .text-slate-400 {
+    color: #64748b !important;
+}
+
+nav.nav-scrolled i.fa-balance-scale {
+    color: #1e40af !important;
+}
+
+nav.nav-scrolled a,
+nav.nav-scrolled button#menu-toggle {
+    color: #1e293b !important;
+}
+
+nav.nav-scrolled a:hover,
+nav.nav-scrolled button#menu-toggle:hover {
+    color: #1e40af !important;
+}
+
+/* Alt çizgi efekti - Scroll durumu */
+nav.nav-scrolled a span {
+    background-color: #1e40af !important;
+}
+
+/* Mobile menu - Scroll durumu */
+nav.nav-scrolled #mobile-menu {
+    background: rgba(255, 255, 255, 0.98) !important;
+    border-color: #e2e8f0 !important;
+}
+
+nav.nav-scrolled #mobile-menu a {
+    color: #1e293b !important;
+}
+
+nav.nav-scrolled #mobile-menu a:hover {
+    background: rgba(30, 64, 175, 0.1) !important;
+    color: #1e40af !important;
+}
