@@ -4,42 +4,115 @@ document.addEventListener('DOMContentLoaded', () => {
     const slider = document.getElementById('servicesSlider');
     const dotsContainer = document.getElementById('servicesDots');
 
-    if (!slider) return;
+    if (!slider || !dotsContainer) return;
 
     clearInterval(waitForSlider);
 
-    const cards = slider.children;
-    const cardWidth = cards[0].offsetWidth + 24;
-    let index = 0;
+    const originalCards = Array.from(slider.children);
+    const gap = 24;
+    
+    // Kart genişliğini dinamik hesapla
+    function getCardWidth() {
+      return originalCards[0].offsetWidth + gap;
+    }
 
-    // dots oluştur
-    [...cards].forEach((_, i) => {
+    // 🔁 TÜM kartları 3 kez klonla (kesintisiz döngü için)
+    const clones = [];
+    for (let i = 0; i < 3; i++) {
+      originalCards.forEach(card => {
+        const clone = card.cloneNode(true);
+        slider.appendChild(clone);
+        clones.push(clone);
+      });
+    }
+
+    let currentPosition = 0;
+    let isAnimating = false;
+
+    // DOTS (SADECE ORİJİNALLER)
+    originalCards.forEach((_, i) => {
       const dot = document.createElement('div');
       dot.className = 'dot';
-      dot.onclick = () => goTo(i);
+      dot.onclick = () => {
+        if (isAnimating) return;
+        goToSlide(i);
+        restartAuto();
+      };
       dotsContainer.appendChild(dot);
     });
 
-    const dots = dotsContainer.children;
+    const dots = Array.from(dotsContainer.children);
 
-    function update() {
-      slider.style.transform = `translateX(-${index * cardWidth}px)`;
-      [...dots].forEach(d => d.classList.remove('active'));
-      dots[index].classList.add('active');
+    function updateDots() {
+      const activeIndex = Math.round(Math.abs(currentPosition) / getCardWidth()) % originalCards.length;
+      dots.forEach((d, i) => {
+        d.classList.toggle('active', i === activeIndex);
+      });
     }
 
-    function goTo(i) {
-      index = i;
-      update();
+    function goToSlide(targetIndex) {
+      isAnimating = true;
+      const cardWidth = getCardWidth();
+      currentPosition = -(targetIndex * cardWidth);
+      
+      slider.style.transition = 'transform 0.7s ease-out';
+      slider.style.transform = `translateX(${currentPosition}px)`;
+      updateDots();
     }
 
-    // otomatik
-    setInterval(() => {
-      index = (index + 1) % cards.length;
-      update();
-    }, 4000);
+    function slideNext() {
+      if (isAnimating) return;
+      
+      isAnimating = true;
+      const cardWidth = getCardWidth();
+      currentPosition -= cardWidth;
+      
+      slider.style.transition = 'transform 0.7s ease-out';
+      slider.style.transform = `translateX(${currentPosition}px)`;
+      updateDots();
+    }
 
-    update();
+    // Sonsuz döngü için reset
+    slider.addEventListener('transitionend', () => {
+      isAnimating = false;
+      
+      const cardWidth = getCardWidth();
+      const totalOriginalWidth = originalCards.length * cardWidth;
+      
+      // Eğer ilk setin sonuna geldiyse, görünmeden ikinci sete atla
+      if (Math.abs(currentPosition) >= totalOriginalWidth) {
+        slider.style.transition = 'none';
+        currentPosition = 0;
+        slider.style.transform = `translateX(${currentPosition}px)`;
+        updateDots();
+      }
+    });
+
+    let auto;
+
+    function startAuto() {
+      auto = setInterval(() => {
+        slideNext();
+      }, 4000);
+    }
+
+    function restartAuto() {
+      clearInterval(auto);
+      startAuto();
+    }
+
+    // Başlangıç
+    updateDots();
+    startAuto();
+
+    // Responsive için resize event
+    window.addEventListener('resize', () => {
+      const cardWidth = getCardWidth();
+      const activeIndex = Math.round(Math.abs(currentPosition) / cardWidth) % originalCards.length;
+      currentPosition = -(activeIndex * cardWidth);
+      slider.style.transition = 'none';
+      slider.style.transform = `translateX(${currentPosition}px)`;
+    });
 
   }, 100);
 

@@ -3245,15 +3245,6 @@ h6 {
   background: rgba(15, 23, 42, 0.85);
 }
 
-.service-card {
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(212, 175, 55, 0.2);
-}
-
 .stat-number {
   font-family: 'Playfair Display', serif;
   font-weight: 700;

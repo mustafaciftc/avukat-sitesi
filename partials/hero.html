@@ -1,29 +1,67 @@
 <!-- HERO -->
 <section id="home" class="relative min-h-screen flex items-center overflow-hidden">
 
-    <!-- Background (AYNEN) -->
+    <!-- Background -->
     <div class="absolute inset-0">
-        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1920&q=80" alt="Adalet"
-            class="w-full h-full object-cover object-center scale-105">
+        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1920&q=80"
+             class="w-full h-full object-cover object-center scale-105">
         <div class="absolute inset-0 bg-gradient-to-r 
             from-slate-950/95 
             via-slate-900/85 
-            to-slate-900/40">
-        </div>
+            to-slate-900/40"></div>
     </div>
 
-    <!-- SOL MARKA -->
-<div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
-        <div class="max-w-xl text-center">
-            <h1 class="text-7xl md:text-6xl lg:text-8xl font-extrabold text-gold leading-tight">
+    <!-- CONTENT -->
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
+        <div class="max-w-xl mx-auto">
+
+            <!-- H1 – YUKARIDAN -->
+            <h1
+                class="font-extrabold text-gold leading-tight animate-slide-down
+                       text-5xl sm:text-6xl md:text-6xl lg:text-8xl">
                 Yağcı Hukuk
             </h1>
 
-            <p class="mt-4 text-xl md:text-5xl text-slate-300 font-medium">
+            <!-- P – SOLDAN -->
+            <p
+                class="mt-4 text-slate-300 font-medium animate-slide-left
+                       text-lg sm:text-xl md:text-5xl">
                 Avukatlık ve Danışmanlık
             </p>
+
         </div>
     </div>
-
-
 </section>
+
+<style>
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-slide-down {
+    animation: slideDown 0.9s ease-out forwards;
+}
+
+.animate-slide-left {
+    animation: slideLeft 0.9s ease-out forwards;
+    animation-delay: 0.2s;
+}
+</style>
