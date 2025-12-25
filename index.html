@@ -3,14 +3,41 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>YAĞCI HUKUK - Hukuk Bürosu</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="/css/about.css">
-    <link rel="stylesheet" href="/css/services.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/services.css">
+    
+    <style>
+        /* Mobil optimizasyon */
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        body {
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
+        
+        /* Mobil boşluk düzeltmeleri */
+        @media (max-width: 768px) {
+            section {
+                margin: 0 !important;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            
+            .container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+        }
+    </style>
 </head>
 
 <body class="smooth-scroll">
@@ -42,16 +69,16 @@
         <i class="fas fa-chevron-up text-xl"></i>
     </button>
 
-    <!-- WhatsApp Floating Button + Modal -->
+    <!-- WhatsApp Floating Button -->
     <button id="whatsapp-btn"
-        class="fixed bottom-8 left-14 w-14 h-14 bg-green-500 text-white rounded-full shadow-2xl hover:bg-green-600 transition-all duration-300 transform hover:scale-110 z-50 flex items-center justify-center text-3xl">
+        class="fixed bottom-8 left-8 w-14 h-14 bg-green-500 text-white rounded-full shadow-2xl hover:bg-green-600 transition-all duration-300 transform hover:scale-110 z-50 flex items-center justify-center text-3xl">
         <i class="fab fa-whatsapp"></i>
     </button>
 
     <!-- WhatsApp Modal -->
     <div id="whatsapp-modal"
-        class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50 transition-opacity duration-300">
-        <div class="bg-slate-900 rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl border border-gold/20 relative">
+        class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50 transition-opacity duration-300 p-4">
+        <div class="bg-slate-900 rounded-2xl p-6 md:p-8 max-w-md w-full mx-4 shadow-2xl border border-gold/20 relative">
             <button id="close-modal"
                 class="absolute top-4 right-4 text-slate-400 hover:text-gold text-2xl transition-colors">
                 <i class="fas fa-times"></i>
@@ -59,7 +86,7 @@
             
             <div class="text-center mb-6">
                 <div class="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4 text-4xl">
-                    <i class="fab fa-whatsapp"></i>
+                    <i class="fab fa-whatsapp text-white"></i>
                 </div>
                 <h3 class="text-2xl font-bold text-white mb-2">WhatsApp Üzerinden Ulaşın</h3>
                 <p class="text-slate-300">Hızlıca mesaj göndererek danışmanlık talebinde bulunabilirsiniz.</p>
@@ -79,11 +106,10 @@
         </div>
     </div>
 
-    <script src="/js/main.js"></script>
-    <script src="js/load-components.js" defer></script>
-    <script src="/js/whatsapp-modal.js"></script>
-    <script src="/js/navbar-scroll.js"></script>
-    <script src="/js/services.js"></script>
+    <script src="js/load-components.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/navbar-scroll.js"></script>
+    <script src="js/services.js"></script>
 </body>
 
 </html>
