@@ -313,22 +313,14 @@ nav.nav-scrolled #mobile-menu a:hover {
 }
 
 #whatsapp-modal {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    display: none; 
 }
 
 #whatsapp-modal.show {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* Modal içeriğinin ortalanması için */
-.modal-content {
-  transform: scale(0.9);
-  transition: transform 0.3s ease;
-}
-
-#whatsapp-modal.show .modal-content {
-  transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+    display: flex;
 }
