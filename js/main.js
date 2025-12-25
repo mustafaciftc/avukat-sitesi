@@ -21,18 +21,6 @@ function initializeScripts() {
         });
     }
 
-    // Scroll reveal
-    const revealElements = document.querySelectorAll('.section-reveal');
-    const revealOnScroll = () => {
-        revealElements.forEach(el => {
-            if (el.getBoundingClientRect().top < window.innerHeight - 100) {
-                el.classList.add('active');
-            }
-        });
-    };
-    window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll();
-
     // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
