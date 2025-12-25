@@ -1,0 +1,334 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #e2e8f0;
+    scroll-behavior: smooth;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+.hero-gradient {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%);
+}
+
+.glass {
+    background: rgba(30, 41, 59, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.gold-accent {
+    color: #d4af37;
+}
+
+.gold-gradient {
+    background: linear-gradient(135deg, #d4af37 0%, #f4e4a1 100%);
+}
+
+.text-gold {
+    color: #d4af37;
+}
+
+.bg-gold {
+    background-color: #d4af37;
+}
+
+.border-gold {
+    border-color: #d4af37;
+}
+
+.hover-gold:hover {
+    color: #d4af37;
+    border-color: #d4af37;
+}
+
+.smooth-scroll {
+    scroll-behavior: smooth;
+}
+
+.section-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.section-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav-blur {
+    backdrop-filter: blur(20px);
+    background: rgba(15, 23, 42, 0.85);
+}
+
+.service-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.2);
+}
+
+.stat-number {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 1s ease forwards;
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+#mobile-menu.open {
+    max-height: 500px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #d4af37;
+    border: 3px solid #0f172a;
+}
+
+/* Component boşluk fix */
+#hero>*:first-child,
+#about>*:first-child,
+#services>*:first-child,
+#contact>*:first-child {
+    margin-top: 0 !important;
+}
+
+#hero>*:last-child,
+#about>*:last-child,
+#services>*:last-child,
+#contact>*:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Temel navbar stilleri */
+nav {
+    transition: all 0.4s ease-in-out !important;
+}
+
+/* Normal Durum - Şeffaf arkaplan, açık yazılar (Varsayılan) */
+nav,
+nav.nav-transparent {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+}
+
+/* Logo ve yazı renkleri - Normal durum */
+nav.nav-transparent .text-gold,
+nav .text-gold {
+    color: #D4AF37 !important;
+    transition: color 0.4s ease-in-out !important;
+}
+
+nav.nav-transparent .text-slate-400,
+nav .text-slate-400 {
+    color: #94a3b8 !important;
+    transition: color 0.4s ease-in-out !important;
+}
+
+nav.nav-transparent i.fa-balance-scale,
+nav i.fa-balance-scale {
+    color: #D4AF37 !important;
+    transition: color 0.4s ease-in-out !important;
+}
+
+nav.nav-transparent a,
+nav.nav-transparent button#menu-toggle,
+nav a,
+nav button#menu-toggle {
+    color: #e2e8f0 !important;
+    transition: color 0.4s ease-in-out !important;
+}
+
+nav.nav-transparent a:hover,
+nav.nav-transparent button#menu-toggle:hover,
+nav a:hover,
+nav button#menu-toggle:hover {
+    color: #D4AF37 !important;
+}
+
+/* Scroll Durumu - Beyaz arkaplan, koyu yazılar */
+nav.nav-scrolled {
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(10px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Logo ve yazı renkleri - Scroll durumu */
+nav.nav-scrolled .text-gold {
+    color: #1e40af !important;
+}
+
+nav.nav-scrolled .text-slate-400 {
+    color: #64748b !important;
+}
+
+nav.nav-scrolled i.fa-balance-scale {
+    color: #1e40af !important;
+}
+
+nav.nav-scrolled a,
+nav.nav-scrolled button#menu-toggle {
+    color: #1e293b !important;
+}
+
+nav.nav-scrolled a:hover,
+nav.nav-scrolled button#menu-toggle:hover {
+    color: #1e40af !important;
+}
+
+/* Alt çizgi efekti - Scroll durumu */
+nav.nav-scrolled a span {
+    background-color: #1e40af !important;
+}
+
+/* Mobile menu - Scroll durumu */
+nav.nav-scrolled #mobile-menu {
+    background: rgba(255, 255, 255, 0.98) !important;
+    border-color: #e2e8f0 !important;
+}
+
+nav.nav-scrolled #mobile-menu a {
+    color: #1e293b !important;
+}
+
+nav.nav-scrolled #mobile-menu a:hover {
+    background: rgba(30, 64, 175, 0.1) !important;
+    color: #1e40af !important;
+}
+
+.slider-card {
+    min-width: 320px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, .08), rgba(255, 255, 255, .03));
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, .1);
+    border-radius: 1.25rem;
+    padding: 2rem;
+    color: white;
+}
+
+.slider-card i {
+    font-size: 2rem;
+    color: #d4af37;
+    margin-bottom: 1rem;
+}
+
+.slider-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+
+.slider-card p {
+    color: #cbd5e1;
+}
+
+/* DOTS */
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, .3);
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #d4af37;
+}
+
+@keyframes reveal-up {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reveal-up {
+    opacity: 0;
+}
+
+.reveal-up.show {
+    animation: reveal-up 0.8s ease-out forwards;
+}
+
+#whatsapp-modal {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+#whatsapp-modal.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Modal içeriğinin ortalanması için */
+.modal-content {
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+#whatsapp-modal.show .modal-content {
+  transform: scale(1);
+}

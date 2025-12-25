@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hakkımızda - Av. Ali YAĞCI</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/output.css">
+
 
 </head>
 
@@ -228,47 +227,47 @@
         <i class="fas fa-chevron-up"></i>
     </button>
 
-    
-    <!-- WhatsApp Floating Button + Modal -->
-    <button id="whatsapp-btn"
-        class="fixed bottom-8 left-10 w-14 h-14 bg-green-500 text-white rounded-full shadow-2xl hover:bg-green-600 transition-all duration-300 transform hover:scale-110 z-50 flex items-center justify-center text-3xl">
-        <i class="fab fa-whatsapp"></i>
-    </button>
 
-    <!-- WhatsApp Modal -->
-    <div id="whatsapp-modal"
-        class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50 transition-opacity duration-300">
-        <div class="bg-slate-900 rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl border border-gold/20 relative">
-            <button id="close-modal"
-                class="absolute top-4 right-4 text-slate-400 hover:text-gold text-2xl transition-colors">
-                <i class="fas fa-times"></i>
-            </button>
+   <a href="https://wa.me/905533419509?text=Merhaba%2C%20hukuki%20danışmanlık%20için%20ulaşıyorum."
+   target="_blank"
+   id="whatsapp-link"
+   class="fixed bottom-8 left-8 w-14 h-14 bg-green-500 text-white rounded-full shadow-2xl hover:bg-green-600 transition-all duration-300 transform hover:scale-110 z-50 flex items-center justify-center text-3xl">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<div id="whatsapp-modal" class="fixed inset-0 bg-black/70 z-50 hidden items-center justify-center p-4">
+    <div class="bg-slate-900 rounded-2xl p-8 max-w-md w-full border border-gold/30 relative">
+        <button id="close-modal" class="absolute top-4 right-4 text-slate-400 hover:text-white text-2xl">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <div class="text-center mb-6">
+            <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i class="fab fa-whatsapp text-white text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">WhatsApp'tan Yazın</h3>
+            <p class="text-slate-300 text-sm">Doğrudan WhatsApp üzerinden iletişime geçin</p>
+        </div>
+        
+        <div class="space-y-3">
+            <a href="https://wa.me/905533419509?text=Merhaba%2C%20hukuki%20danışmanlık%20için%20ulaşıyorum."
+               target="_blank"
+               class="block w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 rounded-lg text-center">
+                <i class="fab fa-whatsapp mr-2"></i> WhatsApp'ta Aç
+            </a>
             
-            <div class="text-center mb-6">
-                <div class="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4 text-4xl">
-                    <i class="fab fa-whatsapp"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-white mb-2">WhatsApp Üzerinden Ulaşın</h3>
-                <p class="text-slate-300">Hızlıca mesaj göndererek danışmanlık talebinde bulunabilirsiniz.</p>
-            </div>
-
-            <div class="space-y-4">
-                <a href="https://wa.me/905533419509?text=Merhaba%2C%20hukuki%20dan%C4%B1%C5%9Fmanl%C4%B1k%20i%C3%A7in%20ula%C5%9F%C4%B1yorum."
-                    target="_blank"
-                    class="block w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-4 rounded-xl text-center transition-colors shadow-lg">
-                    <i class="fab fa-whatsapp mr-2"></i> Mesaj Gönder
-                </a>
-                
-                <p class="text-center text-slate-400 text-sm">
-                    Telefon: <a href="tel:+905533419509" class="text-gold hover:underline">+90 553 341 95 09</a>
-                </p>
-            </div>
+            <button id="cancel-modal" class="block w-full bg-slate-800 hover:bg-slate-700 text-white py-3 rounded-lg text-center">
+                İptal
+            </button>
         </div>
     </div>
+</div>
+
 
     <script src="../js/load-components.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/navbar-scroll.js"></script>
+    <script src="../js/whatsapp-modal.js"></script>
 </body>
 
 </html>
